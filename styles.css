@@ -1,92 +1,52 @@
-/* Reset default margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* Light gray background */
-    color: #333333; /* Dark gray text */
+    font-family: 'Arial', sans-serif;
 }
 
-/* Container for centering content */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    position: relative; /* Position container for absolute positioning of images */
-    text-align: center; /* Center header text */
-}
-
-/* Header styles */
-header {
-    background-color: #333; /* Dark gray background for header */
-    color: #ffffff; /* White text */
-    padding: 10px;
     text-align: center;
-    position: relative; /* Position header for absolute positioning of images */
-    overflow: hidden; /* Ensure no overflow */
+    padding: 20px;
 }
-
-header h1 {
-    font-size: 3rem;
-    text-transform: uppercase;
-    margin: 20px 0;
-    display: inline-block;
+header{
+    background-color: #333;
+    color: white;
 }
-
-.heart {
-    font-size: 2rem;
-    vertical-align: middle;
+.header-container {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header-image {
-    width: 100px; /* Adjust image size as needed */
-    height: 100px; /* Adjust image size as needed */
-    border-radius: 50%; /* Make images round */
-    position: absolute; /* Absolute positioning for images */
-    top: 50%; /* Align vertically */
-    transform: translateY(-50%); /* Adjust vertical alignment */
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.left {
-    left: 20px; /* Position left image */
-}
-
-.right {
-    right: 20px; /* Position right image */
-}
-
-/* Carousel styles */
-.carousel {
-    max-width: 1000px;
-    margin: 20px auto;
-    position: relative;
-    overflow: hidden; /* Ensure no overflow */
+header h1 {
+    margin-top: -10px;
+    flex-grow: 1;
+    font-size: 2rem;
 }
 
 .carousel-inner img {
-    width: 100%;
-    height: auto;
+    height: 400px;
+    object-fit: cover;
 }
 
-.carousel-control-prev, .carousel-control-next {
-    width: 5%;
-}
-
-/* Responsive design */
+/* Responsive Styles */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
     .header-image {
         width: 50px;
         height: 50px;
     }
-    .carousel {
-        max-width: 90%;
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-inner img {
+        height: 200px;
     }
 }
