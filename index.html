@@ -11,11 +11,9 @@
     <header>
         <div class="container header-container">
             <img src="https://image.wedmegood.com/resized-nw/700X/wp-content/uploads/2021/04/161341268_424741641958802_5081044479738181867_n.jpg" alt="Left Image" class="header-image left">
-            
             <div>
                 <p>WEDDING INVITATION</p>
                 <h1>CHAITANYA<span class="heart" style="color: red;">❤</span>CHANDRIKA</h1>
-            
             </div>
             <img src="https://i.pinimg.com/736x/62/2e/ea/622eea665e6d4955d5c64e4fc4581baf.jpg" alt="Right Image" class="header-image right">
         </div>
@@ -61,6 +59,21 @@
         </a>
     </div>
 
+    <div class="save-the-date" style="background-image: url(https://www.wedding-spot.com/blog/sites/wsblog/files/styles/webp_desktop/public/images/migrated/69-Blank%2Bwhite%2Bwedding%2Binvitation%2Bwith%2Bcolorful%2Bflowers%2Bbeside%2Bit.jpg.webp?itok=eMbeGgL-);">
+        <h2>Save the Date</h2>
+        <p>Mark your calendars for our wedding celebration on <i><b>August 28th, 2024</b></i>!</p>
+        <div id="countdown-container">
+          <span id="countdown-text">There are  </span>
+          <span></span>
+          <span id="countdown-number"></span>
+          <span></span>
+          <span id="countdown-text"> days left until the wedding!</span>
+        </div>
+      </div>
+      
+      
+      
+
     <div class="container mt-4">
         <div id="accordion">
             <div class="card">
@@ -72,7 +85,7 @@
                     </h5>
                 </div>
                 <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                    <div class="card-body">
+                    <div class="card-body venue-details">
                         <p><strong>Venue:</strong> Grand Palace Hall</p>
                         <p><strong>Address:</strong> 1234 Wedding Lane, Love City, Country</p>
                         <p><strong>Date:</strong> 25th December 2024</p>
@@ -92,6 +105,21 @@
         $('.carousel').carousel({
             interval: 3000
         });
+
+        // Function to calculate remaining days
+function getRemainingDays() {
+  const weddingDate = new Date("2024-08-28"); // Replace with your actual wedding date
+  const today = new Date();
+  const timeDifference = weddingDate.getTime() - today.getTime();
+  const daysDifference = Math.ceil(timeDifference / (1000 * 60 * 60 * 24));
+  return daysDifference;
+}
+
+// Update countdown display
+const countdownElement = document.getElementById("countdown-number");
+const daysRemaining = getRemainingDays();
+countdownElement.textContent =  daysRemaining
+
     </script>
 </body>
 </html>

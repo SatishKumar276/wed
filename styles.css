@@ -5,13 +5,15 @@ body {
 .container {
     text-align: center;
     padding: 20px;
+
 }
-header{
+
+header {
     background-color: #333;
     color: white;
 }
+
 .header-container {
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -35,6 +37,153 @@ header h1 {
     object-fit: cover;
 }
 
+.save-the-date {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Adjust height as needed */
+  background-color: #e0e0e0;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px; /* Adjust margin as needed */
+  overflow: hidden;
+}
+
+.save-the-date h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  animation: moveUp 5s ease-in-out infinite alternate;
+}
+
+.save-the-date p {
+  font-size: 1.2rem;
+  animation: moveDown 5s ease-in-out infinite alternate;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .save-the-date h2 {
+    font-size: 1.5rem;
+  }
+
+  .save-the-date p {
+    font-size: 1rem;
+  }
+}
+.save-the-date {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Adjust height as needed */
+  background-color: #e0e0e0;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px; /* Adjust margin as needed */
+  overflow: hidden;
+}
+
+.save-the-date h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  animation: moveUp 5s ease-in-out infinite alternate;
+}
+
+.save-the-date p {
+  font-size: 1.2rem;
+  animation: moveDown 5s ease-in-out infinite alternate;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .save-the-date h2 {
+    font-size: 1.5rem;
+  }
+
+  .save-the-date p {
+    font-size: 1rem;
+  }
+}
+
+/* Countdown Styles */
+#countdown {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.save-the-date {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    background-color: #e0e0e0;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px; /* Adjust margin as needed */
+    overflow: hidden;
+  }
+  
+  .save-the-date h2 {
+    font-size: 2rem; /* Adjust font size as needed */
+    margin-bottom: 20px;
+  }
+  
+  .save-the-date p {
+    font-size: 1.2rem; /* Adjust font size as needed */
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .save-the-date h2 {
+      font-size: 1.5rem;
+    }
+  
+    .save-the-date p {
+      font-size: 1rem;
+    }
+  }
+  
+  /* Countdown Styles */
+  #countdown-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
+  #countdown-text {
+    opacity: 1;
+  }
+  
+  #countdown-number {
+    font-size: 2rem;
+    color: red;
+  }
+  
+  
+  
+  #countdown-container:hover #countdown-number {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  
+
+.venue-details {
+    background-image: url('https://www.w3schools.com/w3images/rocks.jpg'); /* Example background image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.venue-details:hover {
+    background-size: 110%;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .header-image {
@@ -48,5 +197,9 @@ header h1 {
 
     .carousel-inner img {
         height: 200px;
+    }
+
+    .venue-details {
+        font-size: 0.9rem;
     }
 }
