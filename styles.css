@@ -1,65 +1,100 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
+/* Reset default margin and padding */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+    color: #333333; /* Dark gray text */
+}
+
+/* Container for centering content */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
-    background-color: #f8f8f8;
+    position: relative; /* Position container for absolute positioning of images */
+}
+
+/* Header styles */
+header {
+    background-color: #333; /* Dark gray background for header */
+    color: #ffffff; /* White text */
+    padding: 10px;
+    text-align: center;
+    position: relative; /* Position header for absolute positioning of images */
+    overflow: hidden; /* Ensure no overflow */
 }
 
 header h1 {
-    margin: 0 20px;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-}
-
-header .logo {
-    width: 50px;
-    height: 50px;
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin: 20px 0;
+    display: inline-block;
 }
 
 .heart {
-    color: red;
-    margin: 0 10px;
+    font-size: 2rem;
+    vertical-align: middle;
 }
 
+.header-image {
+    max-width: 100px; /* Adjust image size as needed */
+    position: absolute; /* Absolute positioning for images */
+    top: 50%; /* Align vertically */
+    transform: translateY(-50%); /* Adjust vertical alignment */
+}
+
+.left {
+    left: 20px; /* Position left image */
+}
+
+.right {
+    right: 20px; /* Position right image */
+}
+
+/* Carousel styles */
 .carousel {
-    overflow: hidden;
-    position: relative;
-    max-width: 100%;
-    margin: 20px 0;
+    max-width: 1000px;
+    margin: 20px auto;
+    text-align: center;
 }
 
 .carousel-container {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    overflow: hidden;
 }
 
-.carousel-container img {
+.carousel-slide {
+    flex: 0 0 auto;
     width: 100%;
-    flex-shrink: 0;
+    transition: transform 0.5s ease;
 }
 
-.venue-details {
-    padding: 20px;
-    background-color: #f0f0f0;
-}
-
-.venue-details img {
+.carousel-slide img {
     width: 100%;
-    max-width: 600px;
     height: auto;
-    margin: 10px 0;
 }
 
-footer {
-    padding: 20px;
-    background-color: #f8f8f8;
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
 }
