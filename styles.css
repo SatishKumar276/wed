@@ -157,18 +157,34 @@ header h1 {
   #countdown-text {
     opacity: 1;
   }
+
+  @keyframes bounce {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
   
   #countdown-number {
     font-size: 2rem;
     color: red;
+    display: inline-block;
+    animation: bounce 1s infinite;
+  }
+
+  .dateClass {
+    display: inline-block;
+    animation: bounce 1s infinite;
   }
   
   
   
-  #countdown-container:hover #countdown-number {
+  /* #countdown-container:hover #countdown-number {
     opacity: 1;
     transform: scale(1.2);
-  }
+  } */
   
 
 .venue-details {
