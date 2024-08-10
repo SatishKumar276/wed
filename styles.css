@@ -172,12 +172,12 @@ header h1 {
     background-position: center;
     color: white;
     padding: 20px;
-    transition: all 0.3s ease;
+     transition: all 0.3s ease;
 }
 
-.venue-details:hover {
+/* .venue-details:hover {
     background-size: 110%;
-}
+} */
 
 /* Responsive Styles */
 @media (max-width: 768px) {
